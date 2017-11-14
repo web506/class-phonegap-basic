@@ -19,4 +19,5 @@
 
 .main {padding: 10px; display: block;}
 #footer {position:absolute; bottom: 0; width:100%;}
-
+.ui-mini {margin:0;}
+#footer a {font-size: 16px;}
