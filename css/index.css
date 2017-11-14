@@ -16,6 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+@import 'jquery.mobile.external-png.min.css';
+@import 'jquery.mobile.icons.min.css';
+@import 'jquery.mobile.inline-png.min.css';
+@import 'jquery.mobile.inline-svg.min.css';
+@import 'jquery.mobile.structure.min.css';
+@import 'jquery.mobile.theme.min.css';
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -44,6 +51,8 @@ body {
     text-transform:uppercase;
     width:100%;
 }
+
+#footer {position:absolute; bottom: 0; width:100%;}
 
 /* Portrait layout (default) */
 .app {
