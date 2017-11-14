@@ -26,58 +26,77 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/themes/blue.min.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Webmaster 506</title>
 </head>
 
 <body>
     <div data-role="page" data-theme="a" class="app" id="page1">
         <div data-role="header">
-            <h1>Webmaster 506</h1>
+            <h1>Welcome</h1>
         </div>
-        <div data-role="main">
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to database</p>
-            <p class="event received">Connection established</p>
-        </div>
-        <h2>Welcome to our Web Development and Multimedia Service App</h2>
+        <div data-role="main" class="main">
+        <h2>Welcome</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.</p>
+        <button onclick="location.href='index.html#page2'">About</button>
+        <button onclick="location.href='index.html#page3'">Services</button>
+        <button onclick="location.href='index.html#page4'">Theme</button>
         </div>
-        <button onclick="location.href='index.html#page2'"">Click</button>
-        <div data-role="footer" id="footer">Thank you!</div>
+        <div data-role="footer" id="footer"><h3>Home Page</h3></div>
     </div> <!-- PAGE --> 
      <div data-role="page" data-theme="a" class="app" id="page2">
         <div data-role="header">
-            <h1>Services</h1>
+            <h1>About</h1>
         </div>
-        <div data-role="main">
-        <div id="deviceready" class="blink">
-            <p class="event listening">Hey there</p>
-            <p class="event received">Tuanis About</p>
-        </div>
-        <h2>Welcome to our Web Development and Multimedia Service App</h2>
+        <div data-role="main" class="main">
+        <h2>About</h2>
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button onclick="location.href='index.html#page1'">Home Page</button>
+        <button onclick="location.href='index.html#page3'">Services</button>
+        <button onclick="location.href='index.html#page4'">Theme</button>
         </div>
-        <button onclick="location.href='index.html#page1'"">Click</button>
-        <div data-role="footer" id="footer">Great!</div>
+        <div data-role="footer" id="footer"><h3>About</h3></div>
     </div> <!-- PAGE 2 --> 
+    <div data-role="page" data-theme="a" class="app" id="page3">
+        <div data-role="header">
+            <h1>Services</h1>
+        </div>
+        <div data-role="main" class="main">
+        <h2>Services</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button onclick="location.href='index.html#page1'">Home Page</button>
+        <button onclick="location.href='index.html#page2'">About</button>
+        <button onclick="location.href='index.html#page4'">Theme</button>
+        </div>
+        <div data-role="footer" id="footer"><h3>Services</h3></div>
+    </div> <!-- PAGE 3 --> 
+    <div data-role="page" data-theme="a" id="page4">
+        <div data-role="header" data-position="inline">
+            <h1>It Worked!</h1>
+        </div>
+        <div data-role="content" data-theme="a">
+            <p>This is content color swatch "A" and a preview of a <a href="#" class="ui-link">link</a>.</p>
+            <label for="slider1">Input slider:</label>
+            <input type="range" name="slider1" id="slider1" value="50" min="0" max="100" data-theme="a" />
+            <fieldset data-role="controlgroup"  data-type="horizontal" data-role="fieldcontain">
+            <legend>Cache settings:</legend>
+            <input type="radio" name="radio-choice-a1" id="radio-choice-a1" value="on" checked="checked" />
+            <label for="radio-choice-a1">On</label>
+            <input type="radio" name="radio-choice-a1" id="radio-choice-b1" value="off"  />
+            <label for="radio-choice-b1">Off</label>
+            </fieldset>
+        </div>
+    </div>
     
     <!--<script type="text/javascript" src="cordova.js"></script>-->
     <script type="text/javascript" src="js/index.js"></script>

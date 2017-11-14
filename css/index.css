@@ -17,5 +17,6 @@
  * under the License.
  */
 
+.main {padding: 10px; display: block;}
 #footer {position:absolute; bottom: 0; width:100%;}
 
